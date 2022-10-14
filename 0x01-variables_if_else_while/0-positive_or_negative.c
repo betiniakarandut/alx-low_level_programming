@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 
-/** 
+/**
  * main - Function that assign a random number
  * to n each time it is executed
  * Description: The if condition checks and
