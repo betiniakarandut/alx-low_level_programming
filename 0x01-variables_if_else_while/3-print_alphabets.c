@@ -6,10 +6,11 @@
  * letters of alphabet.
  * Return: Always 0 (Success).
  */
-int main (void){
+int main(void){
 	char small;
 	char big;
-	for(small = 'a'; small <= 'z'; small++)
+
+	for (small = 'a'; small <= 'z'; small++)
 	{
 		putchar(small);
 	}
