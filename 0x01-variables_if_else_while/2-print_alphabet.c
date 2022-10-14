@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- *main - Function that print 
+ *main - Function that print
  *lettersof alphabet in lowercase.
  *Description: A for loop to iterate through the letters.
  *Return: Always 0 (Success)
