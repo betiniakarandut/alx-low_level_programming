@@ -2,7 +2,8 @@
 #include <time.h>
 #include <stdio.h>
 
-/** main - Function that assign a random number
+/** 
+ * main - Function that assign a random number
  * to n each time it is executed
  * Description: The if condition checks and
  * validates n outputs
@@ -26,6 +27,5 @@ int main(void)
 	{
 		printf("%d is negative\n", n);
 	}
-		
 	return (0);
 }
