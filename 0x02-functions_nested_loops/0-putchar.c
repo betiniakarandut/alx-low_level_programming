@@ -1,7 +1,9 @@
-#include "main.h"
+#include "_putchar.h"
+
 /**
- * main - Function that prints \_putchar
- * Return: Always 0 (Success)
+ * main - Entry point
+ *
+ * Return: Always 0
  */
 int main(void)
 {
