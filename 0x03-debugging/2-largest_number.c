@@ -19,11 +19,10 @@ int largest_number(int a, int b, int c)
 	{
 		largest = b;
 	}
-	else
+	else if
 	{
 		largest = c;
 	}
 	
-	putchar('\n');
 	return (largest);
 }
