@@ -16,10 +16,10 @@ void swap_int(int *a, int *b)
 
 	if (*a)
 	{
-		return((*b = *a));
+		*b = *a;
 	}
 	else if (*b)
 	{
-		return((*a = *b));
+		*a = *b;
 	}
 }
