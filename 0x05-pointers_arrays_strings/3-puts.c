@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdout.h>
 
 /**
  * _puts - Function that prints a string, followed by a 
@@ -13,8 +14,8 @@ void _puts(char *str)
 
 	for (ch = 0; ch != '\0'; ch++)
 	{
-		_putchar(str[ch]);
+		puts(str[ch]);
 	}
 
-	_putchar('\n');
+	puts('\n');
 }
