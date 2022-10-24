@@ -11,13 +11,15 @@
  */
 void swap_int(int *a, int *b)
 {
+	int n;
+	n = *a;
 
-	if (*a)
+	if (n)
 	{
 		*a = *b;
 	}
-	else if (*b)
+	else
 	{
-		*b = *a;
+		*b = n;
 	}
 }
