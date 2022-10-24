@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdout.h>
 
 /**
  * _puts - Function that prints a string, followed by a 
@@ -12,10 +11,10 @@ void _puts(char *str)
 {
 	int ch;
 
-	for (ch = 0; ch != '\0'; ch++)
+	for (ch = 0; str[ch] != '\0'; ch++)
 	{
-		puts(str[ch]);
+		putchar(str[ch]);
 	}
 
-	puts('\n');
+	putchar('\n');
 }
