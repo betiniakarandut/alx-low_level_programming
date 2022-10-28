@@ -60,7 +60,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		if (r[position] > '9')
 		{
 			rem = 1;
-			r[postion] -= 10;
+			r[position] -= 10;
 		}
 		s2--;
 		position++;
