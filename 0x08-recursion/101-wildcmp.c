@@ -7,9 +7,8 @@ int wildcmp(char *s1, char *s2);
 
 /**
  * strlen_no_wildcard - Returns the length of a string,
- *                   ignoring wildcard characters.
+ * ignoring wildcard characters.
  * @str: The string to be measured.
- *
  * Return: The length.
  */
 int strlen_no_wildcard(char *str)
@@ -30,7 +29,7 @@ int strlen_no_wildcard(char *str)
 
 /**
  * iterate_wildcard - Iterates through a string located at a wildcard
- *                until it points to a non-wildcard character.
+ * until it points to a non-wildcard character.
  * @wildstring: The string to be iterated through.
  */
 void iterate_wildcard(char **wildstring)
@@ -44,13 +43,12 @@ void iterate_wildcard(char **wildstring)
 
 /**
  * compare_match - Checks if a string str matches the postfix of
- *                 another string potentially containing wildcards.
+ * another string potentially containing wildcards.
  * @str: The string to be matched.
  * @compare: The compare.
- *
  * Return: If str and compare are identical - a pointer to the null byte
- *                                            located at the end of compare.
- *         Otherwise - a pointer to the first unmatched character in compare.
+ * located at the end of compare.
+ * Otherwise - a pointer to the first unmatched character in compare.
  */
 char *compare_match(char *str, char *compare)
 {
@@ -73,9 +71,8 @@ char *compare_match(char *str, char *compare)
  * wildcmp - Compares two strings, considering wildcard characters.
  * @s1: The first string to be compared.
  * @s2: The second string to be compared - may contain wildcards.
- *
  * Return: If the strings can be considered identical - 1.
- *         Otherwise - 0.
+ * Otherwise - 0.
  */
 int wildcmp(char *s1, char *s2)
 {
