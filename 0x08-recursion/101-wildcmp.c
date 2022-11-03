@@ -1,24 +1,18 @@
-/*
- * File: 100-wildcmp.c
- * @s1: Char to check
- * @s2: Char to compare to s1
- */
-
 #include "main.h"
 
-int strlen_no_wilds(char *str);
-void iterate_wild(char **wildstr);
-char *postfix_match(char *str, char *postfix);
+int strlen_no_wildcard(char *str);
+void iterate_wildcard(char **wildstring);
+char *compare_match(char *str, char *compare);
 int wildcmp(char *s1, char *s2);
 
 /**
- * strlen_no_wilds - Returns the length of a string,
+ * strlen_no_wildcard - Returns the length of a string,
  *                   ignoring wildcard characters.
  * @str: The string to be measured.
  *
  * Return: The length.
  */
-int strlen_no_wilds(char *str)
+int strlen_no_wildcard(char *str)
 {
 	int len = 0, index = 0;
 
@@ -28,51 +22,51 @@ int strlen_no_wilds(char *str)
 			len++;
 
 		index++;
-		len += strlen_no_wilds(str + index);
+		len += strlen_no_wildcard(str + index);
 	}
 
 	return (len);
 }
 
 /**
- * iterate_wild - Iterates through a string located at a wildcard
+ * iterate_wildcard - Iterates through a string located at a wildcard
  *                until it points to a non-wildcard character.
- * @wildstr: The string to be iterated through.
+ * @wildstring: The string to be iterated through.
  */
-void iterate_wild(char **wildstr)
+void iterate_wildcard(char **wildstring)
 {
-	if (**wildstr == '*')
+	if (**wildstring == '*')
 	{
-		(*wildstr)++;
-		iterate_wild(wildstr);
+		(*wildstring)++;
+		iterate_wildcard(wildstring);
 	}
 }
 
 /**
- * postfix_match - Checks if a string str matches the postfix of
+ * compare_match - Checks if a string str matches the postfix of
  *                 another string potentially containing wildcards.
  * @str: The string to be matched.
- * @postfix: The postfix.
+ * @compare: The compare.
  *
- * Return: If str and postfix are identical - a pointer to the null byte
- *                                            located at the end of postfix.
- *         Otherwise - a pointer to the first unmatched character in postfix.
+ * Return: If str and compare are identical - a pointer to the null byte
+ *                                            located at the end of compare.
+ *         Otherwise - a pointer to the first unmatched character in compare.
  */
-char *postfix_match(char *str, char *postfix)
+char *compare_match(char *str, char *compare)
 {
-	int str_len = strlen_no_wilds(str) - 1;
-	int postfix_len = strlen_no_wilds(postfix) - 1;
+	int str_len = strlen_no_wildcard(str) - 1;
+	int compare_len = strlen_no_wildcard(compare) - 1;
 
-	if (*postfix == '*')
-		iterate_wild(&postfix);
+	if (*compare == '*')
+		iterate_wildcard(&compare);
 
-	if (*(str + str_len - postfix_len) == *postfix && *postfix != '\0')
+	if (*(str + str_len - compare_len) == *compare && *compare != '\0')
 	{
-		postfix++;
-		return (postfix_match(str, postfix));
+		compare++;
+		return (compare_match(str, compare));
 	}
 
-	return (postfix);
+	return (compare);
 }
 
 /**
@@ -87,8 +81,8 @@ int wildcmp(char *s1, char *s2)
 {
 	if (*s2 == '*')
 	{
-		iterate_wild(&s2);
-		s2 = postfix_match(s1, s2);
+		iterate_wildcard(&s2);
+		s2 = compare_match(s1, s2);
 	}
 
 	if (*s2 == '\0')
