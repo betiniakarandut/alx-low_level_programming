@@ -4,7 +4,8 @@
  * main - Function that prints the number of
  * arguments passed to it.
  * @argc: Number of elements in the array of argv[]
- * @argv[]: Array of argc
+ * @argv: Array of argc
+ * Return: Always 0 (Success)
  */
 int main(int argc, char *argv[] __attribute__((unused)))
 {
