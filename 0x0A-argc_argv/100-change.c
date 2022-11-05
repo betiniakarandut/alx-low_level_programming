@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	for (z = 0; z < 5 && num >= 0; z++)
+	for (z = 0; z < 5 && number >= 0; z++)
 	{
 		while (number >= coins[z])
 		{
