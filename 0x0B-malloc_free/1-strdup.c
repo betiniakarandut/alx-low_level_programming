@@ -7,30 +7,30 @@
  * 
  * @str: Character to check and duplicate.
  *
- * Return: Pointer to the copied string (Success), NULL (Error)
+ * Return: pointer to the copied string (Success), NULL (Error)
  */
+
 char *_strdup(char *str)
 {
-	char *duplicate;
-	unsigned int i, length;
+	char *dup;
+	unsigned int i, len;
 
-	length = 0;
 	i = 0;
+	len = 0;
 
 	if (str == NULL)
 		return (NULL);
 
-	while (str[length])
-		length++;
+	while (str[len])
+		len++;
 
-	duplicate = malloc(sizeof(char) * (length + 1));
+	dup = malloc(sizeof(char) * (len + 1));
 
-	if (duplicate == NULL)
+	if (dup == NULL)
 		return (NULL);
 
-	while ((duplicate[i] = str[i]) != '\0')
+	while ((dup[i] = str[i]) != '\0')
 		i++;
 
-	return (duplicate);
+	return (dup);
 }
-
