@@ -6,40 +6,35 @@
  * @av: array of arguments
  * Return: Pointer to the new string (Success), NULL (Error)
  */
-
 char *argstostr(int ac, char **av)
 {
-	int a, b, c, wid;
-	char *str;
+	char *s;
+	int a, b, c, d;
 
-	if (ac == 0 || av == NULL)
+	if (ac == 0)
 		return (NULL);
-
-	for (a = 0; a < ac; a++)
+	if (av == 0)
+		return (NULL);
+	a = 0;
+	for (b = 0; b < ac; b++)
 	{
-		for (b = 0; av[a][b] != '\0'; b++)
-			wid++;
-		wid++;
+		for (c = 0; av[b][c] != '\0'; c++)
+			a++;
+		a++;
 	}
-
-	str = malloc(sizeof(char) * (wid + 1));
-
-	if (str == NULL)
+	a++;
+	s = malloc(a * sizeof(char));
+	if (s == 0)
 		return (NULL);
-
-	c = 0;
-
-	for (a = 0; a < ac; a++)
+	d = 0;
+	for (b = 0; b < ac; b++)
 	{
-		for (b = 0; av[a][b] != '\0'; b++)
+		for (c = 0; av[b][c] != '\0'; c++)
 		{
-			str[c] = av[a][b];
-			c++;
+			s[d++] = av[b][c];
 		}
-		str[c] = '\n';
-		c++;
+		s[d++] = '\n';
 	}
-
-	return (str);
+	s[d] = '\0';
+	return (s);
 }
-
