@@ -1,8 +1,8 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdlib.h>
 
 /**
- * *_memset - fills memory with a constant byte
+ * *_rewindmem - fills memory with a constant byte
  * @s: memory area to be filled
  * @b: char to copy
  * @n: number of times to copy b
@@ -28,17 +28,17 @@ char *_rewindmem(char *s, char b, unsigned int n)
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *ptr;
+	char *beti;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	ptr = malloc(size * nmemb);
+	beti = malloc(size * nmemb);
 
-	if (ptr == NULL)
+	if (beti == NULL)
 		return (NULL);
 
-	_rewindmem(ptr, 0, nmemb * size);
+	_rewindmem(beti, 0, nmemb * size);
 
-	return (ptr);
+	return (beti);
 }
