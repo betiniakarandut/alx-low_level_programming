@@ -1,5 +1,5 @@
+#include <stdio.h>
 #include "main.h"
-#include <stdlib.h>
 
 /**
  * *_memset - fills memory with a constant byte
@@ -28,17 +28,17 @@ char *_rewindmem(char *s, char b, unsigned int n)
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *beti;
+	char *ptr;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	beti = malloc(size * nmemb);
+	ptr = malloc(size * nmemb);
 
-	if (beti == NULL)
+	if (ptr == NULL)
 		return (NULL);
 
-	_rewindmem(beti, 0, nmemb * size);
+	_rewindmem(ptr, 0, nmemb * size);
 
-	return (beti);
+	return (ptr);
 }
