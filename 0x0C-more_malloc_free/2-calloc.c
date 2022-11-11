@@ -28,17 +28,17 @@ char *_rewindmem(char *s, char b, unsigned int n)
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *betini;
+	char *beti;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	betini = malloc(size * nmemb);
+	beti = malloc(size * nmemb);
 
-	if (betini == NULL)
+	if (beti == NULL)
 		return (NULL);
 
-	_rewindmem(betini, 0, nmemb * size);
+	_rewindmem(beti, 0, nmemb * size);
 
-	return (betini);
+	return (beti);
 }
