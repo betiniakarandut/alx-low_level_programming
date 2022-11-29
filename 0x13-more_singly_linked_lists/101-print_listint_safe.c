@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * print_listint_safe - prints a linked
  * list, safely
@@ -8,7 +7,7 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t num_of_nodes = 0;
+	unsigned int num_of_nodes = 0;
 	long int diff;
 
 	while (head)
