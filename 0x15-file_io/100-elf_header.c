@@ -1,4 +1,4 @@
-#idefine _GNU_SOURCE
+#define _GNU_SOURCE
 /**
  * printclass - prints the class from an elf header
  * @head: header information
