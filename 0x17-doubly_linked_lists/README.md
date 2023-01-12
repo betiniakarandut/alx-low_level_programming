@@ -1,4 +1,4 @@
-# 0x16. C - Doubly linked lists
+# 0x17. C - Doubly linked lists
 
 In this project, I learnt how to use doubly linked list to create and traverse lists. It is much better than singly linked list because it can move forward(next node) and backward(previous node) at the same time.
 
