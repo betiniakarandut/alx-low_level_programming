@@ -11,16 +11,18 @@
 int advanced_binary(int *array, size_t size, int value)
 {
     int middle, result;
+    size_t i = 0;
 
     if (array == NULL || size == 0)
         return (-1);
 
     printf("Searching in array: ");
-    for (size_t i = 0; i < size; i++)
+    while(i < size)
     {
         printf("%d", array[i]);
         if (i < size - 1)
             printf(", ");
+	i++;
     }
     printf("\n");
 
